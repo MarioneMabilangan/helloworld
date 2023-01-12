@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/arrow_left"
+        android:title="hola"
+        android:icon="@drawable/icone_fleche_gauche_noir"
+        android:orderInCategory="100"
+        app:showAsAction="always" />
+    <item android:id="@+id/arrow_right"
+        android:title="hola"
+        android:icon="@drawable/arrow_icon_28"
+        android:orderInCategory="200"
+        app:showAsAction="always" />
+    <item android:id="@+id/buscar"
+        android:title="buscar"
+        android:icon="@drawable/_77210"
+        android:orderInCategory="300"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always|withText" />
+    <item android:id="@+id/perfil"
+        android:icon="@drawable/img_20220401_192657_removebg_preview"
+        android:title="hola"
+        android:orderInCategory="400"
+        app:showAsAction="always" />
+</menu>
