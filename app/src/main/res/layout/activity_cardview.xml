@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".Cardview">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/appbar"
@@ -24,21 +24,40 @@
             <TextView android:id="@+id/lblAbTitulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Top 5 Joel Valera"
+                android:text="Joel Valera?"
                 style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
             <TextView android:id="@+id/lblAbSubTitulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Numero 5"
+                android:text="No, Carview"
                 style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle" />
         </LinearLayout>
-
     </androidx.appcompat.widget.Toolbar>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        app:srcCompat="@drawable/image111" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="400dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="4dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbCard"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"></androidx.appcompat.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="395dp"
+            android:layout_height="242dp"
+            tools:srcCompat="@tools:sample/avatars" />
+    </androidx.cardview.widget.CardView>
+
+
+
 </LinearLayout>

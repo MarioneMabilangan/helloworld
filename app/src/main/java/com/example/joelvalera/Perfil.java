@@ -9,9 +9,11 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import androidx.appcompat.widget.Toolbar;
 
 public class Perfil extends AppCompatActivity {
     EditText nom, cognoms;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +22,9 @@ public class Perfil extends AppCompatActivity {
         nom = (EditText) findViewById(R.id.editNom);
         cognoms = (EditText) findViewById(R.id.editCognom);
 
-
+        toolbar = findViewById(R.id.appbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
     @Override

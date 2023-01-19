@@ -8,10 +8,12 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
+import androidx.appcompat.widget.Toolbar;
 
 public class JoelValera extends AppCompatActivity {
     String nom, cognoms;
     TextView text, text2;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,9 @@ public class JoelValera extends AppCompatActivity {
                }
             text.setText(extras.getString("nom"));
             text2.setText(extras.getString("cognoms"));
+        toolbar = findViewById(R.id.appbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

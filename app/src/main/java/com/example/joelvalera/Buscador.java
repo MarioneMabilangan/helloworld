@@ -11,10 +11,12 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
 
 import java.util.ArrayList;
 
 public class Buscador extends AppCompatActivity {
+    Toolbar toolbar;
     ListView listView;
     ArrayList<String> list;
     ArrayAdapter<String > adapter;
@@ -39,6 +41,9 @@ public class Buscador extends AppCompatActivity {
         list.add("Papaya");
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,list);
         listView.setAdapter(adapter);
+        toolbar = findViewById(R.id.appbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
     @Override
@@ -74,12 +79,12 @@ public class Buscador extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.arrow_left:
-                Intent intent = new Intent(Buscador.this, MainActivity.class);
+                Intent intent = new Intent(Buscador.this, Joel3.class);
                 startActivity(intent);
                 return true;
             case R.id.arrow_right:
             case R.id.perfil:
-                Intent intent2 = new Intent(Buscador.this, Perfil.class);
+                Intent intent2 = new Intent(Buscador.this, Cardview.class);
                 startActivity(intent2);
                 return true;
 
