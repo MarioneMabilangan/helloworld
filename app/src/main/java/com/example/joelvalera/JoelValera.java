@@ -48,7 +48,7 @@ public class JoelValera extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             case R.id.arrow_right:
-                Intent intent2 = new Intent(JoelValera.this, JoelValera.class);
+                Intent intent2 = new Intent(JoelValera.this, MainActivity.class);
                 startActivity(intent2);
                 return true;
 
