@@ -127,6 +127,7 @@ public class MainActivity extends AppCompatActivity implements Runnable{
                 img.setImageBitmap(Bitmap.createScaledBitmap(bmp, 180, 180, false));
                 Thread thread = new Thread(this);
                 thread.start();
+                Toast.makeText(this, "Fail", Toast.LENGTH_SHORT).show();
             }
         }
     }
